@@ -1,6 +1,7 @@
 package seungtae.first.controller;
 
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
@@ -11,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import seungtae.first.member.Member;
 import seungtae.first.member.MemberRepository;
 
+@Slf4j
 @Controller
 @RequestMapping("/member")
 @RequiredArgsConstructor
@@ -37,6 +39,7 @@ public class MemberController {
         }
 
         memberRepository.save(member);
+        log.info("Sign up Success!!! = {}", member);
         return "redirect:/";    // home
     }
 }
