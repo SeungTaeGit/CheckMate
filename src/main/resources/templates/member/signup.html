@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link th:href="@{/css/bootstrap.min.css}"
+        href="../css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .container {
+            max-width: 560px;
+        }
+    </style>
+    <title>SIGNUP</title>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="py-5 text-center">
+        <h2>SIGNUP</h2>
+    </div>
+
+    <form action="" th:action th:object="${member}" method="post">
+
+        <div>
+            <label for="Name">Name</label>
+            <input type="text" id="Name" th:field="*{Id}"
+                   class="form-control" placeholder="이름을 입력하세요.">
+        </div>
+        <div>
+            <label for="Passwd">Password</label>
+            <input type="text" id="Passwd" th:field="*{password}"
+                   class="form-control" placeholder="사용할 비밀번호를 입력하세요.">
+        </div>
+        <div>
+            <label for="checkPasswd">Check Password</label>
+            <input type="text" id="checkPasswd" th:field="*{password}"
+                   class="form-control" placeholder="비밀번호를 한 번 더 입력하세요.">
+        </div>
+
+        <hr class="my-4">
+
+        <div class="row">
+            <div class="col">
+                <button class="w-100 btn btn-primary btn-lg" type="submit">SIGN UP</button>
+            </div>
+            <div class="col">
+                <button class="w-100 btn btn-secondary btn-lg"
+                        th:onclick="|location.href='@{/}'|"
+                        type="button">CANCEL</button>
+            </div>
+        </div>
+
+    </form>
+
+</div> <!-- /container -->
+
+</body>
+</html>
