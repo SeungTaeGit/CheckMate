@@ -6,6 +6,7 @@ import org.springframework.stereotype.Repository;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import java.util.concurrent.ConcurrentHashMap;
 
 @Slf4j
@@ -25,6 +26,13 @@ public class MemberRepository {
     // 회원 조회
     public Member findBySequence(Long sequence) {
         return store.get(sequence);
+    }
+
+    // 회원 아이디로 조회
+    public Optional<Member> findById(String Id) {
+        return findAll().stream()
+                .filter(m -> m.getId().equals(Id))
+                .findFirst();
     }
 
     // 전체 회원 조회

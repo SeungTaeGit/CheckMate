@@ -18,12 +18,6 @@ public class MemberController {
 
     private final MemberRepository memberRepository;
 
-    // 로그인 매핑
-    @GetMapping("/login")
-    public String login() {
-        return "member/login";
-    }
-
 //    @GetMapping("/contact")
 //    public String contact() {
 //        return "page/contact";
@@ -32,7 +26,7 @@ public class MemberController {
     // 회원가입 매핑
     @GetMapping("/add")
     public String signup(@ModelAttribute Member member) {
-        return "member/signup";
+        return "member/signupForm";
     }
 
     // 회원가입 검증 및 매핑
@@ -43,6 +37,6 @@ public class MemberController {
         }
 
         memberRepository.save(member);
-        return "redirect:/";
+        return "redirect:/";    // home
     }
 }
