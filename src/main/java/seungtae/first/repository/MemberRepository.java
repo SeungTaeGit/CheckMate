@@ -1,7 +1,8 @@
-package seungtae.first.member;
+package seungtae.first.repository;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Repository;
+import seungtae.first.member.Member;
 
 import java.util.ArrayList;
 import java.util.List;
