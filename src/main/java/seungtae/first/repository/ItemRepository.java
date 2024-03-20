@@ -1,24 +1,29 @@
 package seungtae.first.repository;
 
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Repository;
+import seungtae.first.item.Item;
 import seungtae.first.member.Member;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
+@Slf4j
+@Repository
 public class ItemRepository {
 
-    private static Map<Long, Member> itemStore = new ConcurrentHashMap<>();
+    private static Map<Long, Item> itemStore = new ConcurrentHashMap<>();
     private static long ItemSequence = 0L;
 
     // 리스트 추가
-    public Member save(Member member) { // 리스트 저장
-        member.setSequence(++ItemSequence);
-        itemStore.put(member.getSequence(), member);
-        return member;
+    public Item saveItem(Item item) {
+        item.setItemSequence(++ItemSequence);
+        itemStore.put(item.getItemSequence(), item);
+        return item;
     }
 
     // 리스트 조회
-    public Member findBySequence(Long sequence) {
+    public Item findByItemSequence(Long sequence) {
         return itemStore.get(sequence);
     }
 }
