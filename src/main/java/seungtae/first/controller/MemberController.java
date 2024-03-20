@@ -20,11 +20,6 @@ public class MemberController {
 
     private final MemberRepository memberRepository;
 
-//    @GetMapping("/contact")
-//    public String contact() {
-//        return "page/contact";
-//    }
-
     // 회원가입 매핑
     @GetMapping("/add")
     public String signup(@ModelAttribute Member member) {
@@ -33,7 +28,7 @@ public class MemberController {
 
     // 회원가입 검증 및 매핑
     @PostMapping("/add")
-    public String signupVaild(@Validated @ModelAttribute Member member, BindingResult bindingResult) {
+    public String signupValid(@Validated @ModelAttribute Member member, BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
             return "member/add";
         }
