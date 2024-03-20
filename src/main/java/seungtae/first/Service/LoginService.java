@@ -3,7 +3,7 @@ package seungtae.first.Service;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import seungtae.first.member.Member;
-import seungtae.first.member.MemberRepository;
+import seungtae.first.repository.MemberRepository;
 
 @Service
 @RequiredArgsConstructor
