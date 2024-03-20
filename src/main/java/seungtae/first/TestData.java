@@ -4,7 +4,7 @@ import jakarta.annotation.PostConstruct;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 import seungtae.first.member.Member;
-import seungtae.first.member.MemberRepository;
+import seungtae.first.repository.MemberRepository;
 
 @Component
 @RequiredArgsConstructor
