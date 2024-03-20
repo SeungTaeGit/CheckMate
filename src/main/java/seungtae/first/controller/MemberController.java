@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import seungtae.first.member.Member;
-import seungtae.first.member.MemberRepository;
+import seungtae.first.repository.MemberRepository;
 
 @Slf4j
 @Controller
