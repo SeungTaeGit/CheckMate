@@ -1,12 +1,49 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta charset="utf-8">
+    <link th:href="@{/css/bootstrap.min.css}"
+          href="../css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <h2>ITEMS</h2>
 
-    <button><a href="/list/add">Add List</a></button>
+<div class="container" style="max-width: 600px">
+    <div class="py-5 text-center">
+        <h2>리스트 목록</h2>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <button class="btn btn-primary float-end"
+                    onclick="location.href='writeListForm.html'"
+                    th:onclick="|location.href='@{/list/add}'|"
+                    type="button">리스트 등록</button>
+        </div>
+    </div>
+
+    <hr class="my-4">
+    <div>
+        <table class="table">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>To-Do</th>
+                <th>Date</th>
+                <th>Content</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="list : ${lists}">
+                <td><a href="todo.html" th:href="@{/list/{listId}(listId=${list?.itemSequence})}" th:text="${list?.itemSequence}">ID</a></td>
+                <td><a href="todo.html" th:href="@{|/list/${list?.itemSequence}|}" th:text="${list?.title}">ToDo</a></td>
+                <td th:text="${list?.date}">Date</td>
+                <td th:text="${list?.content}">Content</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div> <!-- /container -->
+
 </body>
 </html>
