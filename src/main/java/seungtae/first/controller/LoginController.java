@@ -42,6 +42,6 @@ public class LoginController {
         }
 
         log.info("Login Success!!! = {}", loginMember);
-        return "redirect:/";
+        return "redirect:/list";
     }
 }
