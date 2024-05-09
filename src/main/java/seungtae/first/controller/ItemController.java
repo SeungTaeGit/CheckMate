@@ -41,7 +41,7 @@ public class ItemController {
 
         itemRepository.saveItem(list);
         log.info("Write Success!!! = {}", list);
-        return "redirect:/";    // home
+        return "redirect:/list";    // Lists 페이지
     }
 
     // 추후 업데이트
