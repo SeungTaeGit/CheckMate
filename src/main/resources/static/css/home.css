@@ -1,0 +1,85 @@
+body {
+    padding:0;
+    margin:0;
+    overflow:hidden;
+	height: 600px;
+}
+canvas {
+    padding:0;
+    margin:0;
+}
+div.btnbg {
+    position:fixed;
+    left:0;
+    top:0;
+}
+
+
+/* 메인 페이지의 헤더 네이게이션 */
+#homeHead {
+    position: fixed;
+    /* background-color : #f1efe9; */
+    width : 100%;
+    height : 6rem;
+    font-size: 1.5rem;
+    padding: 2.5rem 20rem;
+    z-index : 10;
+    /* box-shadow: 0 0 15px 20px #f1efe9; */
+    font-weight: 800;
+    font-family : 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+    color : black;
+}
+#homeNav {
+}
+#homeLeftUl {
+    float : left;
+}
+#homeRightUl {
+    float : right;
+}
+.homeLi {
+    display : inline;
+    padding-right : 0.7rem;
+}
+/* 헤더 호버 애니메이션 */
+.effect a {
+    /**/
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.effect a:hover {
+    color : wheat;
+    transition : 0.7s;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 4rem;
+}
+
+
+/* 메인 페이지의 사이트 소개 부분 */
+/* section id = "site" */
+#main {
+    font-size: 1.5rem;
+    /* 요소 중앙 배치 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color : black;
+    font-weight: 510;
+}
+#mainDiv {
+    text-align: center;
+}
+#siteName {
+    font-size : 6rem;
+    letter-spacing: 0.3rem;
+}
+#webIntro {
+    font-size: 2rem;
+    letter-spacing: 0.7rem;
+}
