@@ -1,0 +1,173 @@
+/* 배경 애니메이션 */
+body {
+background: linear-gradient(180deg, #F9EAFF, #FEF6FF) fixed;
+animation:bg-move 3s linear 0s infinite;
+}
+
+@keyframes bg-move{
+0%{background: linear-gradient(60deg, #F9EAFF, #FEF6FF) fixed;}
+10%{background: linear-gradient(80deg, #F9EAFF, #FEF6FF) fixed;}
+20%{background: linear-gradient(100deg, #F9EAFF, #FEF6FF) fixed;}
+30%{background: linear-gradient(120deg, #F9EAFF, #FEF6FF) fixed;}
+40%{background: linear-gradient(140deg, #F9EAFF, #FEF6FF) fixed;}
+50%{background: linear-gradient(160deg, #F9EAFF, #FEF6FF) fixed;}
+60%{background: linear-gradient(140deg, #F9EAFF, #FEF6FF) fixed;}
+70%{background: linear-gradient(120deg, #F9EAFF, #FEF6FF) fixed;}
+80%{background: linear-gradient(100deg, #F9EAFF, #FEF6FF) fixed;}
+90%{background: linear-gradient(80deg, #F9EAFF, #FEF6FF) fixed;}
+100%{background: linear-gradient(60deg, #F9EAFF, #FEF6FF) fixed;}
+}
+
+
+/* 메인 */
+.container {
+    font-size: 1.5rem;
+    color : white;
+    font-weight: 510;
+    text-align : center;
+}
+#site {
+    font-size : 3rem;
+    color : gray;
+}
+/* 버튼 */
+.listButton {
+  border: none;
+  width: 130px;
+  height: 40px;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  outline: none;
+  float: right;
+  right: 7rem;
+}
+.listButton:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+  direction: rtl;
+  z-index: -1;
+  box-shadow:
+   -7px -7px 20px 0px #fff9,
+   -4px -4px 5px 0px #fff9,
+   7px 7px 20px 0px #0002,
+   4px 4px 5px 0px #0001;
+  transition: all 0.3s ease;
+}
+.listButton:hover {
+  color: #000;
+}
+.listButton:hover:after {
+  left: auto;
+  right: 0;
+  width: 100%;
+}
+.listButton:active {
+  top: 2px;
+}
+#listTable {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 3rem;
+    color : gray;
+}
+.table {
+}
+#tableHead {
+    /* 요소 중앙 배치 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+    justify-content: center;
+    align-items: center;
+    float: left;
+    display: flex;
+    width: 70rem;
+    height: 1rem;
+    border-radius: 1.5rem;
+    margin: 2rem 2rem;
+    backdrop-filter: blur(24px);
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 1rem;
+    clip-path: inset(0em);
+    box-shadow: 0 3px 0px rgba(0, 0, 0, 0.12), 0 0px 0px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    background-color: rgba(255, 255, 255, 0.7);
+}
+.listEx {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.listEx li {
+    margin-right : 2rem;
+}
+.list {
+    float: left;
+    display: flex;
+    width: 70rem;
+    height: 7rem;
+    border-radius: 1.5rem;
+    margin: 2rem 2rem;
+    backdrop-filter: blur(24px);
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 1rem;
+    clip-path: inset(0em);
+    box-shadow: 0 3px 0px rgba(0, 0, 0, 0.12), 0 0px 0px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    background-color: rgba(255, 255, 255, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+.list:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+.list p {
+    margin-right : 2rem;
+}
+
+/* writeListForm */
+#titleDiv {
+}
+#contentDiv {
+}
+.Div {
+    color : black;
+}
+.Div input {
+  width: 500px;
+  height: 32px;
+  font-size: 15px;
+  border: 0;
+  border-radius: 15px;
+  outline: none;
+  padding-left: 10px;
+  background-color: rgb(233, 233, 233);
+}
+.write {
+    display: inline-block;
+    margin-top: 2rem;
+}
+.de {
+    right: 0;
+    width: 280px;
+}
