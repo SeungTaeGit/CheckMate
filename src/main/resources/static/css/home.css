@@ -27,7 +27,7 @@ div.btnbg {
     /* box-shadow: 0 0 15px 20px #f1efe9; */
     font-weight: 800;
     font-family : 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
-    color : black;
+    color : white;
 }
 #homeNav {
 }
@@ -69,11 +69,10 @@ div.btnbg {
     display: flex;
     justify-content: center;
     align-items: center;
-    color : black;
+    color : white;
     font-weight: 510;
 }
 #mainDiv {
-    text-align: center;
 }
 #siteName {
     font-size : 6rem;
