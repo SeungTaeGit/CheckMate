@@ -35,6 +35,6 @@ public class MemberController {
 
         memberRepository.save(member);
         log.info("Sign up Success!!! = {}", member);
-        return "redirect:/";    // home
+        return "redirect:/login";    // Login
     }
 }
