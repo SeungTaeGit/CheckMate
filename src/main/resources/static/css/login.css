@@ -93,8 +93,7 @@ body {
 }
 .login .inputBx button, input[type="submit"] {
   width: 100%;
-  background: #0078ff;
-  background: linear-gradient(45deg, #ff357a, #fff172);
+  background: linear-gradient(45deg, #0078ff, #FEF6FF);
   border: none;
   cursor: pointer;
 }
