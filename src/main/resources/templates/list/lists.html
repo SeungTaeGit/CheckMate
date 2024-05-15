@@ -27,8 +27,8 @@
             </ul>
         </div>
         <div th:each="list : ${lists}" class="list">
-            <p><a href="todo.html" th:href="@{/list/{listId}(listId=${list?.itemSequence})}" th:text="${list?.itemSequence}">ID</a></p>
-            <p><a href="todo.html" th:href="@{|/list/${list?.itemSequence}|}" th:text="${list?.title}">ToDo</a></p>
+            <p><a href="list.html" th:href="@{/list/{listId}(listId=${list?.itemSequence})}" th:text="${list?.itemSequence}">ID</a></p>
+            <p><a href="list.html" th:href="@{|/list/${list?.itemSequence}|}" th:text="${list?.title}">ToDo</a></p>
             <p th:text="${list?.date}">Date</p>
             <p th:text="${list?.content}">Content</p>
         </div>
