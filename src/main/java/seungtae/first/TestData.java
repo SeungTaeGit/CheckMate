@@ -17,10 +17,9 @@ public class TestData {
 
     @PostConstruct
     public void init() {
-        memberRepository.save(new Member("st", "SeungTae", "123!"));
+        memberRepository.save(new Member("ST", "SeungTae", "pw"));
 
-        itemRepository.saveItem(new List("Test Title", "Test Contect"));
-        itemRepository.saveItem(new List("Test Title 2", "Test Contect 2"));
+        itemRepository.saveItem(new List("Test Todo", "Test Content"));
     }
 }
 
