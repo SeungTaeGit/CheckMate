@@ -6,10 +6,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 import seungtae.first.list.List;
 import seungtae.first.repository.ItemRepository;
 
@@ -28,6 +25,13 @@ public class ItemController {
         return "list/lists";
     }
 
+    @GetMapping("/{sequence}")
+    public String list(@PathVariable Long sequence, Model model) {
+        List list = itemRepository.findByItemSequence(sequence);
+        model.addAttribute("list", list);
+        return "list/list";
+    }
+
     @GetMapping("/add")
     public String writeList(@ModelAttribute List list) {
         return "list/writeListForm";
@@ -44,9 +48,4 @@ public class ItemController {
         return "redirect:/list";    // Lists 페이지
     }
 
-    // 추후 업데이트
-    @GetMapping("/item")    // 각 리스트의 개별 상세 페이지
-    public String item() {
-        return "list/todo";
-    }
 }
