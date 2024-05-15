@@ -35,7 +35,11 @@ public class ItemRepository {
         return new ArrayList<>(itemStore.values());
     }
 
-    public void update() {
-
+    // 리스트 수정
+    public void update(Long sequence, List updateParam) {
+        List findList = findByItemSequence(sequence);
+        findList.setTitle(updateParam.getTitle());
+        findList.setContent(updateParam.getContent());
+        findList.setDate(updateParam.getDate());
     }
 }
