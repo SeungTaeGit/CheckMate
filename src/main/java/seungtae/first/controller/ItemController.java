@@ -48,4 +48,21 @@ public class ItemController {
         return "redirect:/list";    // Lists 페이지
     }
 
+    @GetMapping("/{sequence}/edit")
+    public String edit(@PathVariable Long sequence, Model model) {
+        List list = itemRepository.findByItemSequence(sequence);
+        model.addAttribute("list", list);
+        return "list/edit";     // edit 페이지
+    }
+
+    @PostMapping("/{sequence}/edit")
+    public String editList(@PathVariable Long sequence, @ModelAttribute("list") List list) {
+        List listParam = new List();
+        listParam.setTitle(list.getTitle());
+        listParam.setDate(list.getDate());
+        listParam.setContent(list.getContent());
+
+        itemRepository.update(sequence, listParam);
+        return "redirect:/list/{sequence}";
+    }
 }
