@@ -4,43 +4,43 @@
     <meta charset="UTF-8">
     <link type="text/css" href="../css/lists.css" rel="stylesheet">
 
-    <title>List</title>
+    <title>CheckMate</title>
 </head>
 <body>
 
-<section class="container">
+<section class="container container2">
 
-    <div>
-        <label for="itemSequence" th:text="#{label.list.itemSequence}">List Sequence</label>
-        <input type="text" id="itemSequence" name="itemSequence" value="1" th:value="${list.itemSequence}" readonly>
-    </div>
-    <div>
-        <label for="title" th:text="#{label.list.title}">Title</label>
-        <input type="text" id="title" name="title" value="title" th:value="${list.title}" readonly>
-    </div>
-    <div>
-        <label for="date" th:text="#{label.list.date}">Date</label>
-        <input type="text" id="date" name="date" value="date" th:value="${list.date}" readonly>
-    </div>
-    <div>
-        <label for="content" th:text="#{label.list.content}">Content</label>
-        <input type="text" id="content" name="content" value="content" th:value="${list.content}" readonly>
-    </div>
-
-    <hr class="my-4">
-
-    <div class="row">
-        <div class="col">
-            <button onclick="location.href='edit.html'"
-                    th:onclick="|location.href='@{/list/{sequence}/edit(sequence=${list.itemSequence})}'|"
-                    type="button" th:text="#{page.updateItem}">상품 수정</button>
+    <div class="list2">
+        <div class="list2Div">
+            <label for="itemSequence">List Sequence</label>
+            <input type="text" id="itemSequence" name="itemSequence" value="1" th:value="${list.itemSequence}" readonly>
         </div>
-        <div class="col">
-            <button onclick="location.href='lists.html'"
-                    th:onclick="|location.href='@{/list}'|"
-                    type="button" th:text="#{button.cancel}">목록으로</button>
+        <div class="list2Div">
+            <label for="title">Title</label>
+            <input type="text" id="title" name="title" value="title" th:value="${list.title}" readonly>
+        </div>
+        <div class="list2Div">
+            <label for="date">Date</label>
+            <input type="text" id="date" name="date" value="date" th:value="${list.date}" readonly>
+        </div>
+        <div class="list2Div">
+            <label for="content">Content</label>
+            <input type="text" id="content" name="content" value="content" th:value="${list.content}" readonly>
         </div>
     </div>
+
+
+    <button class="listButton listButton2"
+            onclick="location.href='edit.html'"
+            th:onclick="|location.href='@{/list/{sequence}/edit(sequence=${list.itemSequence})}'|"
+            type="button">Edit
+    </button>
+
+    <button class="listButton listButton2"
+            onclick="location.href='lists.html'"
+            th:onclick="|location.href='@{/list}'|"
+            type="button">To List
+    </button>
 
 </section> <!-- /container -->
 
