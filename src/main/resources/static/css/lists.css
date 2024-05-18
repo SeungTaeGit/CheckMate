@@ -1,7 +1,8 @@
 /* 배경 애니메이션 */
 body {
-background: linear-gradient(180deg, #F9EAFF, #FEF6FF) fixed;
-animation:bg-move 3s linear 0s infinite;
+/* background: linear-gradient(180deg, #F9EAFF, #FEF6FF) fixed; */
+/* animation:bg-move 3s linear 0s infinite; */
+background-image : url('../img/night.png');
 }
 
 @keyframes bg-move{
@@ -28,7 +29,6 @@ animation:bg-move 3s linear 0s infinite;
 }
 #site {
     font-size : 3rem;
-    color : gray;
 }
 /* 버튼 */
 .listButton {
@@ -38,7 +38,6 @@ animation:bg-move 3s linear 0s infinite;
   border-radius: 5px;
   padding: 10px 25px;
   font-family: 'Lato', sans-serif;
-  font-weight: 500;
   background: transparent;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -50,6 +49,8 @@ animation:bg-move 3s linear 0s infinite;
   outline: none;
   float: right;
   right: 7rem;
+  font-weight: 700;
+  color: white;
 }
 .listButton:after {
   position: absolute;
@@ -83,7 +84,6 @@ animation:bg-move 3s linear 0s infinite;
     left: 50%;
     transform: translateX(-50%);
     margin-top: 3rem;
-    color : gray;
 }
 .table {
 }
@@ -101,14 +101,15 @@ animation:bg-move 3s linear 0s infinite;
     height: 1rem;
     border-radius: 1.5rem;
     margin: 2rem 2rem;
-    backdrop-filter: blur(24px);
     font-size: 1.2rem;
     text-align: center;
     padding: 1rem;
     clip-path: inset(0em);
-    box-shadow: 0 3px 0px rgba(0, 0, 0, 0.12), 0 0px 0px rgba(0, 0, 0, 0.24);
     transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-    background-color: rgba(255, 255, 255, 0.7);
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 .listEx {
     display: flex;
@@ -127,22 +128,29 @@ animation:bg-move 3s linear 0s infinite;
     height: 7rem;
     border-radius: 1.5rem;
     margin: 2rem 2rem;
-    backdrop-filter: blur(24px);
     font-size: 1.2rem;
     text-align: center;
     padding: 1rem;
     clip-path: inset(0em);
-    box-shadow: 0 3px 0px rgba(0, 0, 0, 0.12), 0 0px 0px rgba(0, 0, 0, 0.24);
     transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-    background-color: rgba(255, 255, 255, 0.5);
     justify-content: center;
     align-items: center;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 .list:hover {
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    backdrop-filter: blur(5px);
 }
 .list p {
     margin-right : 2rem;
+    font-weight: 700;
+}
+.list p a {
+    text-decoration-line: none;
+    color: wheat;
 }
 
 /* writeListForm */
@@ -170,4 +178,39 @@ animation:bg-move 3s linear 0s infinite;
 .de {
     right: 0;
     width: 280px;
+}
+
+
+
+
+
+/* list.html */
+.container2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.list2 {
+    width: 70rem;
+    height: 35rem;
+    border-radius: 1.5rem;
+    margin: 2rem 2rem;
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 1rem;
+    clip-path: inset(0em);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin-top: 10rem;
+}
+.list2:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    backdrop-filter: blur(5px);
+}
+.listButton2 {
+    float : none;
+    right : 0;
 }
