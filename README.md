@@ -28,38 +28,107 @@
 <br>
 
 
-### 클래스 구조
+### 디렉토리 구조
 ---
-#### Java Class
-- repository
-  - MemberRepository
-    > 회원 데이터 저장
-    - save
-    - update
-    - findById
-    - findAll
-  - ListRepository
-    > 리스트 데이터 저장
-    - save
-    - update
-      
-- service
-  - LoginService
-    > 로그인 관련 로직
-    - login
-  - ListService
-    > 리스트 관련 로직
-- controller
-  - LoginController
-  - BasicController
-  - MemberController
-  - ListController
-- testData
-  - MemberData
-  - ListData
-<br>
-
-#### Template
-- 
+```bash
+├─.gradle
+│  ├─8.5
+│  │  ├─checksums
+│  │  ├─dependencies-accessors
+│  │  ├─executionHistory
+│  │  ├─fileChanges
+│  │  ├─fileHashes
+│  │  └─vcsMetadata
+│  ├─buildOutputCleanup
+│  └─vcs-1
+├─.idea
+│  └─modules
+├─build
+│  ├─classes
+│  │  └─java
+│  │      └─main
+│  │          └─seungtae
+│  │              └─first
+│  │                  ├─controller
+│  │                  ├─list
+│  │                  ├─member
+│  │                  ├─repository
+│  │                  └─Service
+│  ├─generated
+│  │  └─sources
+│  │      ├─annotationProcessor
+│  │      │  └─java
+│  │      │      └─main
+│  │      └─headers
+│  │          └─java
+│  │              └─main
+│  ├─resources
+│  │  └─main
+│  │      ├─static
+│  │      │  ├─css
+│  │      │  ├─img
+│  │      │  └─js
+│  │      └─templates
+│  │          ├─list
+│  │          ├─member
+│  │          └─page
+│  └─tmp
+│      └─compileJava
+│          └─compileTransaction
+│              ├─backup-dir
+│              └─stash-dir
+├─gradle
+│  └─wrapper
+└─src
+    ├─main
+    │  ├─java
+    │  │  └─seungtae
+    │  │      └─first
+    │  │          ├─controller
+    │  │              ├─BasicController.java
+    │  │              ├─ItemController.java
+    │  │              ├─LoginController.java
+    │  │              └─MemberController.java
+    │  │          ├─list
+    │  │              └─List.java
+    │  │          ├─member
+    │  │              ├─LoginForm.java
+    │  │              └─Member.java
+    │  │          ├─repository
+    │  │              ├─ItemRepository.java
+    │  │              └─MemberRepository.java
+    │  │          ├─Service
+    │  │              └─LoginService.java
+    │  │          ├─FirstProjectApplication        // Main Thread
+    │  │          └─TestData
+    │  └─resources
+    │      ├─static
+    │      │  ├─css
+    │      │     ├─basic.css
+    │      │     ├─bootstrap.css
+    │      │     ├─home.css
+    │      │     ├─lists.css
+    │      │     └─login.css
+    │      │  ├─img
+    │      │     ├─background.css
+    │      │     └─night.css
+    │      │  └─js
+    │      │     └─home.js
+    │      └─templates
+    │         ├─list
+    │            ├─edit.html
+    │            ├─list.html
+    │            ├─lists.html
+    │            └─wirteListForm.html
+    │          ├─member
+    │            ├─loginForm.html
+    │            └─signupForm.html
+    │          └─page
+    │            └─contact.html
+    └─test
+        └─java
+            └─seungtae
+                └─first
+```
 
 <br>
