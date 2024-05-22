@@ -1,10 +1,27 @@
 ## CheckMate
 <br>
 
-### 서비스 소개
----
 사진
 소개
+
+#### 개발 기간
+2024.02. - 2024.05.
+<br>
+<br>
+
+
+### Stacks
+---
+**Evironment** <br>
+<img src="https://img.shields.io/badge/IntelliJ_IDEA-000000?style=for-the-badge&amp;logo=IntelliJ%20IDEA&amp;logoColor=white" alt="IntelliJ_IDEA">
+<img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=Git&logoColor=white">   <!-- Git -->
+<img src="https://img.shields.io/badge/Github-181717?style=for-the-badge&logo=GitHub&logoColor=white">   <!-- Github -->
+
+**Development** <br>
+<img src="https://img.shields.io/badge/java-007396?style=for-the-badge&logo=OpenJDK&logoColor=white">   <!-- Java -->
+<img src="https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=Spring&logoColor=white">  <!-- Spring -->
+<img src="https://img.shields.io/badge/springboot-6DB33F?style=for-the-badge&logo=springboot&logoColor=white">  <!-- Spring boot -->
+<br>
 <br>
 
 
@@ -20,6 +37,7 @@
   #### 기능
   **회원** : `로그인`, `회원가입` <br>
   **To-do List** : `List 등록(및 등록 성공 상세 페이지)`, `List 전체 확인(및 개별 페이지)` 
+<br>
 <br>
 
 
