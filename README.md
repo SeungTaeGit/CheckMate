@@ -1,8 +1,11 @@
 ## CheckMate
 <br>
 
-사진
-소개
+![checkmate](https://github.com/SeungTaeGit/CheckMate/assets/129585999/01393551-8759-4df8-9513-23478778c80e)
+
+- 기본적인 To-do 관리 앱입니다.
+- Java 및 Spring Framework Web 개발에서 주로 사용하는 `메소드`, `어노테이션` 등을 학습하기 위한 프로젝트입니다.
+<br>
 
 #### 개발 기간
 2024.02. - 2024.05.
