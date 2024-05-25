@@ -38,6 +38,10 @@
   ```
   http://3.39.240.104:8080/
   ```
+  #### Test ID
+  ```
+  ID : ST ,  Password : pw
+  ```
   #### 기능
   **회원** : `로그인`, `회원가입` <br>
   **To-do List** : `List CREATE (리스트 등록)`, `List READ (전체 조회 및 개별 상세 조회)`, `List UPDATE (수정)`, `List DELETE (삭제)`
