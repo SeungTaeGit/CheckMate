@@ -44,7 +44,6 @@ public class ItemController {
         }
 
         itemRepository.saveItem(list);
-        log.info("Write Success!!! = {}", list);
         return "redirect:/list";    // Lists 페이지
     }
 
@@ -64,5 +63,11 @@ public class ItemController {
 
         itemRepository.update(sequence, listParam);
         return "redirect:/list/{sequence}";
+    }
+
+    @DeleteMapping("/{sequence}")
+    public String deleteList(@PathVariable Long sequence, @ModelAttribute("list") List list) {
+        itemRepository.delete(sequence);
+        return "redirect:/list";
     }
 }
