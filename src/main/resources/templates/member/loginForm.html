@@ -25,14 +25,12 @@
                        placeholder="이름을 입력하세요.">
             </div>
             <div class="inputBx">
-                <input type="text" id="Passwd"
+                <input type="password" id="Passwd"
                        th:field="*{password}"
                        placeholder="비밀번호를 입력하세요.">
             </div>
             <div class="inputBx">
                 <button type="submit">LOGIN</button>
-                <!--                        <button th:onclick="|location.href='@{/}'|"-->
-                <!--                                type="button">CANCEL</button>-->
             </div>
             <div class="links">
                 <a href="/member/add">Signup</a>
