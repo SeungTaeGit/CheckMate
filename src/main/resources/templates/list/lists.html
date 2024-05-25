@@ -15,7 +15,8 @@
     <button class="listButton"
             onclick="location.href='writeListForm.html'"
             th:onclick="|location.href='@{/list/add}'|"
-            type="button">Add</button>
+            type="button">Add
+    </button>
 
     <div id="listTable">
         <div id="tableHead">
@@ -26,12 +27,28 @@
                 <li>Content</li>
             </ul>
         </div>
-        <div th:each="list : ${lists}" class="list">
-            <p><a href="list.html" th:href="@{/list/{listId}(listId=${list?.itemSequence})}" th:text="${list?.itemSequence}">ID</a></p>
-            <p><a href="list.html" th:href="@{|/list/${list?.itemSequence}|}" th:text="${list?.title}">ToDo</a></p>
-            <p th:text="${list?.date}">Date</p>
-            <p th:text="${list?.content}">Content</p>
-        </div>
+
+
+
+            <div th:each="list : ${lists}" class="list">
+                <p>
+                    <a href="list.html" th:href="@{/list/{listId}(listId=${list?.itemSequence})}"
+                      th:text="${list?.itemSequence}">ID</a></p>
+                <p>
+                    <a href="list.html" th:href="@{|/list/${list?.itemSequence}|}"
+                       th:text="${list?.title}">ToDo</a></p>
+                <p th:text="${list?.date}">Date</p>
+                <p th:text="${list?.content}">Content</p>
+
+                <form action="" th:action="@{/list/{sequence}(sequence=${list.itemSequence})}" th:object="${list}" method="post">
+
+                    <input type="hidden" name="_method" value="DELETE">
+                    <button class="listButton listButton2"
+                            type="submit">DELETE
+                    </button>
+                </form>
+            </div>
+
     </div>
 
 </section>

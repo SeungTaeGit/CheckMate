@@ -22,6 +22,9 @@ public class ItemRepository {
         list.setItemSequence(++ItemSequence);
         list.setDate(nowTime);
         itemStore.put(list.getItemSequence(), list);
+
+        log.info("Write Success!!! = {}", list);
+
         return list;
     }
 
@@ -41,5 +44,16 @@ public class ItemRepository {
         findList.setTitle(updateParam.getTitle());
         findList.setContent(updateParam.getContent());
         findList.setDate(updateParam.getDate());
+
+        log.info("Edit Success!!! = {}", findList);
+    }
+
+    // 리스트 삭제
+    public void delete(Long sequence) {
+//        Long listItemSequence = list.getItemSequence();
+        List findList = findByItemSequence(sequence);
+        itemStore.remove(sequence, findList);
+
+        log.info("Delete Success!!! = {}", findList);
     }
 }
